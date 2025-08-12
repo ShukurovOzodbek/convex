@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "launch-dock",
   "private": true,
   "scripts": {
     "build": "turbo run build",
