@@ -1,0 +1,5 @@
+.gitignore
+.next
+.turbo
+node_modules
+README.md
