@@ -11,4 +11,4 @@ const config = {
     plugins: ['prettier-plugin-tailwindcss', '@ianvs/prettier-plugin-sort-imports'],
     importOrder: ['^react$', '^next(/.*)?$', '<THIRD_PARTY_MODULES>', '^~/.*$', '^[./]']
 };
-export default config;
+export default config
