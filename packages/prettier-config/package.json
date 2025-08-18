@@ -1,15 +1,16 @@
 {
-    "name": "@repo/prettier-config",
-    "version": "1.0.0",
-    "type": "module",
-    "exports": {
-        ".": {
-            "import": "./index.js",
-            "default": "./index.js"
-        }
-    },
-    "dependencies": {
-        "prettier-plugin-tailwindcss": "^0.6.0",
-        "@ianvs/prettier-plugin-sort-imports": "^4.3.0"
+  "name": "@repo/prettier-config",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "default": "./index.js"
     }
+  },
+  "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier-plugin-packagejson": "^2.5.19",
+    "prettier-plugin-tailwindcss": "^0.6.0"
+  }
 }

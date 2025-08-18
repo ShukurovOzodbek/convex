@@ -9,6 +9,13 @@ const config = {
     bracketSpacing: true,
     endOfLine: 'lf',
     plugins: ['prettier-plugin-tailwindcss', '@ianvs/prettier-plugin-sort-imports'],
+    importOrderParserPlugins: [
+        'typescript',
+        'jsx',
+        'tsx',
+        'decorators-legacy',
+    ],
     importOrder: ['^react$', '^next(/.*)?$', '<THIRD_PARTY_MODULES>', '^~/.*$', '^[./]']
 };
+
 export default config
