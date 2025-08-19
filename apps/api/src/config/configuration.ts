@@ -1,12 +1,12 @@
 export interface EnvironmentVariables {
     port: number;
     database: {
-        name: string,
-        host: string,
-        user: string,
-        pass: string,
-        port: number,
-    }
+        name: string;
+        host: string;
+        user: string;
+        pass: string;
+        port: number;
+    };
 }
 
 export default (): EnvironmentVariables => ({
@@ -17,5 +17,5 @@ export default (): EnvironmentVariables => ({
         user: process.env.POSTGRES_USER,
         pass: process.env.POSTGRES_PASS,
         port: parseInt(process.env.POSTGRES_PORT),
-    }
+    },
 });

@@ -11,6 +11,6 @@ import configuration from './configuration';
             ignoreEnvFile: process.env.NODE_ENV === 'production',
             load: [configuration],
         }),
-    ]
+    ],
 })
-export class ConfigModule { }
+export class ConfigModule {}
