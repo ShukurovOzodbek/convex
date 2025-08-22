@@ -8,7 +8,7 @@ const config = {
     arrowParens: 'always',
     bracketSpacing: true,
     endOfLine: 'lf',
-    plugins: ['prettier-plugin-tailwindcss', '@ianvs/prettier-plugin-sort-imports'],
+    plugins: ['prettier-plugin-tailwindcss', '@ianvs/prettier-plugin-sort-imports', 'prettier-plugin-prisma'],
     importOrderParserPlugins: [
         'typescript',
         'jsx',
