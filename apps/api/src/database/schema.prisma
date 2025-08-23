@@ -1,6 +1,5 @@
 generator client {
     provider = "prisma-client-js"
-    output = "./generate/client"
 }
 
 datasource db {
@@ -8,24 +7,37 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-enum UserRole {
-  OWNER
-  ADMIN
-  MEMBER
+enum Language {
+    RU @map("ru")
+    EN @map("en")
 }
 
-
 model User {
-    id         String   @id @unique @default(uuid())
-    email      String   @unique
-    password   String
-    fullName   String   @map("full_name")
-    image      String
-    telegramId String   @unique @map("telegrma_id")
-    username   String   @unique
-    language   String
-    cratedAt   DateTime @default(now()) @map("created_at")
-    updatedAt  DateTime @default(now()) @updatedAt
+    id             String           @id @unique @default(uuid())
+    email          String           @unique
+    password       String
+    fullName       String           @map("full_name")
+    image          String
+    telegramId     String           @unique @map("telegrma_id")
+    username       String           @unique
+    language       Language
+    cratedAt       DateTime         @default(now()) @map("created_at")
+    updatedAt      DateTime         @default(now()) @updatedAt
+    RefreshSession RefreshSession[]
 
     @@map("users")
+}
+
+model RefreshSession {
+    id          String    @id @default(uuid())
+    userId      String
+    jti         String    @unique
+    hashedToken String
+    expiresAt   DateTime
+    revokedAt   DateTime?
+    replacedBy  String?
+    createdAt   DateTime  @default(now())
+    user        User      @relation(fields: [userId], references: [id])
+
+    @@index([userId, expiresAt])
 }
