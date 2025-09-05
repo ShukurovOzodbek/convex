@@ -2,7 +2,7 @@ import fastifyEnv from '@fastify/env';
 import Fastify, {FastifyInstance} from 'fastify';
 import {join} from "path";
 import * as dotenv from "dotenv";
-import {AppConfig, AppConfigSchema} from "./config/config.schema";
+import {AppConfigSchema} from "./config/config.schema";
 
 dotenv.config({path: join(__dirname, "../../../", ".env")});
 dotenv.config({path: join(process.cwd(), ".env")});
