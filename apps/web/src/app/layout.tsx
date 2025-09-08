@@ -6,7 +6,7 @@ interface ILayout {
     children: React.ReactNode;
 }
 
-export default function Layout({ children }: ILayout) {
+export default function MainLayout({ children }: ILayout) {
     return (
         <html lang="en">
             <body>{children}</body>
