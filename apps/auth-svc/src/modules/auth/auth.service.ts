@@ -1,8 +1,10 @@
 import { randomUUID } from 'crypto';
+
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import * as argon2 from 'argon2';
 import { addSeconds } from 'date-fns';
+
 import { PrismaService } from '../../database/prisma.service';
 
 @Injectable()

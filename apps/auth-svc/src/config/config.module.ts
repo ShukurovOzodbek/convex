@@ -1,6 +1,8 @@
 import { join } from 'path';
+
 import { Global, Module } from '@nestjs/common';
 import { ConfigModule as BaseConfigmodule } from '@nestjs/config';
+
 import configuration from './configuration';
 
 @Global()

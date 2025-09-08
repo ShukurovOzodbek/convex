@@ -15,7 +15,17 @@ const config = {
         'tsx',
         'decorators-legacy',
     ],
-    importOrder: ['^react$', '^next(/.*)?$', '<THIRD_PARTY_MODULES>', '^~/.*$', '^[./]']
+    importOrder: [
+        "^(react/(.*)$)|^(react$)",
+        "",
+        "<THIRD_PARTY_MODULES>",
+        "",
+        "^@/lib/(.*)$",
+        "",
+        "^@/components/(.*)$",
+        "",
+        "^[.]"
+    ]
 };
 
 export default config

@@ -1,7 +1,8 @@
-import "fastify";
-import type {AppConfig} from "../config/config.schema";
+import 'fastify';
 
-declare module "fastify" {
+import type { AppConfig } from '../config/config.schema';
+
+declare module 'fastify' {
     interface FastifyInstance {
         config: AppConfig;
     }
